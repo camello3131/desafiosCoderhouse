@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import Cuerpo from './components/cuerpo'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import NavBar from './components/navBar/NavBar'
+import ItemListContainer from './components/itemListContainer/ItemListContainer'
 
 
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <NavBar/>
-    <Cuerpo/>
+    <ItemListContainer param1="Hola" param2="Este texto sera reemplazado por nuestro catalogo"/>
     </>
   )
 }

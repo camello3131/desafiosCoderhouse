@@ -42,3 +42,15 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.carrito-ico {
+  height: 40px;
+  margin-right: 15px;
+}
+
+.carrito-ico:hover {
+  height: 42px;
+  transition: 0.5s;
+}
+
+

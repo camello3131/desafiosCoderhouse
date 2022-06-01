@@ -1,8 +1,9 @@
 import React from 'react'
+import CartWidget from '../cartWidget/cartWidget'
 
 function NavBar() {
   return (
-    <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav className="navbar navbar-expand-sm bg-light navbar-light">
         <div className="container-fluid">
             <a className="navbar-brand" href="#">Logo</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -22,6 +23,7 @@ function NavBar() {
                 </ul>
             </div>
         </div>
+        <CartWidget/>
     </nav>
   )
 }
