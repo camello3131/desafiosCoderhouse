@@ -53,4 +53,12 @@ button {
   transition: 0.5s;
 }
 
+.imgItem {
+  height: 80px;
+  display: block;
+  margin-bottom: 3px;
+}
 
+.agregar {
+  margin-top: 3px;
+}
