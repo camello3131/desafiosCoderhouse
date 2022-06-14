@@ -1,4 +1,9 @@
-
+.itemsCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 109px;
+}
 
 .imgProd {
     height: 80px;

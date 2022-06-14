@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import NavBar from './components/navBar/NavBar'
-import ItemListContainer from './components/itemListContainer/ItemListContainer'
-import ItemCount from './components/ItemCount/ItemCount'
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './components/navBar/NavBar';
+import ItemCount from './components/ItemCount/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import ItemListContainer from './components/itemListContainer/ItemListContainer';
+import Cart from './components/Cart/Cart';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 
 
@@ -12,8 +14,15 @@ import ItemCount from './components/ItemCount/ItemCount'
 function App() {
   return (
     <>
-    <NavBar/>
-    <ItemListContainer param1="Hola" param2="Este texto sera reemplazado por nuestro catalogo"/>
+    <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route path='' element={<ItemListContainer/>}/>
+        <Route path='/productos' element={<ItemListContainer/>}/>
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/detalle/:detalleId' element={<ItemDetailContainer/>}/>
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
