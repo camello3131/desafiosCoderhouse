@@ -1,6 +1,9 @@
-.container {
-    width: 98%;
-    margin: auto;
+.card{
+ width: 500px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ align-content: center;
 }
 
 .detail {
@@ -8,11 +11,13 @@
     margin-bottom: 3rem;
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .detailImg{
-    height: 200px;
+    height: 300px;
 }
 .content {
     width: 100%;
+    text-align: center;
 }

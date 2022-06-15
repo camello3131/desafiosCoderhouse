@@ -8,12 +8,12 @@ import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
 function Item({info}) {
   return (
     <div className='container contenedorCards'>
-        <div className='card itemsCard'>
-            
-            <Link to={`/detalle/${info.id}`}>
-            <button className='btn btn-primary'>detalles</button>
-            </Link>
+        <div className='card itemsCard '>
             <img src={info.img} alt="" className='imgProd card-body' />
+            <Link to={`/detalle/${info.id}`}>
+                <button className='btn btn-outline-primary'>Ver Detalles</button>
+            </Link>
+            
         </div>
     </div>
   )

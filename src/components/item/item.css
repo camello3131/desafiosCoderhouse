@@ -1,11 +1,13 @@
 .itemsCard {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    max-width: 109px;
+    max-width: 115px;
 }
 
 .imgProd {
     height: 80px;
     width: 80px;
 }
+

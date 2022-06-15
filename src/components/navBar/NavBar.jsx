@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-sm bg-light navbar-light">
         <div className="container-fluid">
-            <NavLink className="navbar-brand" to={"/"}>Logo</NavLink>
+            <NavLink className="navbar-brand" to={"/"}>Inicio</NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span className="navbar-toggler-icon"></span>
         </button>
@@ -16,7 +16,10 @@ function NavBar() {
                     <NavLink className="nav-link" to={"/cart"}>Carrito</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link" to={"/productos"}>Productos</NavLink>
+                    <NavLink className="nav-link" to={"/productos/gaseosas"}>Gaseosas</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to={"/productos/cervezas"}>Cervezas</NavLink>
                 </li>
                 </ul>
             </div>
