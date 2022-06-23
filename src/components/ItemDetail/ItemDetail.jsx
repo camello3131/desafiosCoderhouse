@@ -2,14 +2,17 @@ import React, {useState} from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import "./ItemDetail.css"
 import {Link} from "react-router-dom"
+import { useCartContext } from "../../context/CartContext"
 
 function ItemDetail({data}) {
     const [goToCart, setGoToCarte] = useState(false);
-
+    const {addProduct} = useCartContext ()
 
     const onAdd = (cantidad)=> {
         alert("compraste " +cantidad + " productos")
-        setGoToCarte(true) }
+        setGoToCarte(true)
+        addProduct(data, cantidad)
+    }
   return (
     <div className='d-flex card container'>
         <div className='detail'>
