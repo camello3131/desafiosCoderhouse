@@ -26,6 +26,7 @@ function ItemDetail({data}) {
                         ?<Link to="/cart">Terminar Compra</Link>
                         :<ItemCount initial={1} stock={data.stock} onAdd={onAdd} className="card-footer"/>                    
                     }
+                    <p>stock disponible: {data.stock}</p>
                 </div> 
             </div>
         </div>

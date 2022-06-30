@@ -5,7 +5,7 @@ import "./item.css"
 function Item({info}) {
 
   return (
-    <div className='container contenedorCards'>
+    <div className='contenedorCards'>
         <div className='card itemsCard '>
             <img src={info.img} alt="" className='imgProd card-body' />
             <Link to={`/detalle/${info.id}`}>

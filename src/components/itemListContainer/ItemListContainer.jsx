@@ -27,7 +27,7 @@ function ItemListContainer(props) {
   return (
       <>
       
-      <div className='cont-cards'>
+      <div className='cont-cards container'>
         <ItemList data={data}/>
       </div>
       </>
