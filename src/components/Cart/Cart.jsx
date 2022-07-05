@@ -14,7 +14,8 @@ const Cart = () =>{
       name: "Lucas",
       email: "lucasbritosboccazzi@outlook.com",
       phone: "448144",
-      addres: "assss"
+      addres: "assss",
+      cuit: "122112"
     },
     items: cart.map(product => ({id: product.id, nombre: product.name, precio: product.price, cantidad: product.cantidad})),
     total: totalPrice(),
@@ -46,13 +47,37 @@ const Cart = () =>{
       }
       <div className='container'>
         <p>
-          total: {totalPrice()}
+          Total de la compra: $ {totalPrice()}
         </p>
-        <button onClick={handleClick} className="btn btn-success" >Generar Orden</button>
+
+          <form action="" className='container form-group'>
+            <label htmlFor="">
+              <input type="text" className='form-control' placeholder='Nombre' />
+            </label>
+            <label htmlFor="">
+              <input type="text" className='form-control' placeholder='Apellido' />
+            </label> <br />
+            <label htmlFor="">
+              <input type="email" className='form-control' placeholder='Email' />
+            </label>
+            <label htmlFor="">
+              <input type="text" className='form-control' placeholder='Telefono' />
+            </label> <br />
+            <label htmlFor="">
+              <input type="text" className='form-control' placeholder='Direccion' />
+            </label>
+            <label htmlFor="">
+              <input type="text" className='form-control' placeholder='CUIT/CUIL' />
+            </label> <br />
+            <button type='' className='btn btn-primary mb-2' onClick={handleClick} id='submitButton'>Generar Orden</button>
+        </form>
       </div>
 
     </>
   )
 }
+
+const btn = document.getElementById('submitButton')
+
 
 export default Cart

@@ -8,10 +8,10 @@ function ItemDetail({data}) {
     const [goToCart, setGoToCarte] = useState(false);
     const {addProduct} = useCartContext ()
 
-    const onAdd = (cantidad)=> {
-        alert("compraste " +cantidad + " productos")
+    const onAdd = (quantity)=> {
+        alert("compraste " + quantity + " productos")
         setGoToCarte(true)
-        addProduct(data, cantidad)
+        addProduct(data, quantity)
     }
   return (
     <div className='d-flex card container'>

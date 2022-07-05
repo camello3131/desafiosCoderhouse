@@ -10,7 +10,7 @@ function CartWidget() {
   return (
     <div>
         <Link to= "/cart"><button className='btn btn-outline-primary'>Cart</button></Link>
-        <span>{totalProducts() || ""}</span>
+        <span className='total'>{totalProducts() || ""}</span>
     </div>
   )
 }

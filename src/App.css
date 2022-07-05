@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 .App {
   text-align: center;
@@ -62,3 +62,12 @@ button {
 .agregar {
   margin-top: 3px;
 }
+
+.encabezado{
+  height: 5px;
+  width: 100%;
+  background: rgb(79,185,252);
+  background: linear-gradient(36deg, rgba(79,185,252,1) 0%, rgba(13,106,199,1) 35%);
+}
+
+

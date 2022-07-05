@@ -8,6 +8,8 @@ function Item({info}) {
     <div className='contenedorCards'>
         <div className='card itemsCard '>
             <img src={info.img} alt="" className='imgProd card-body' />
+            <hr />
+            <p className='title'>{info.name}</p>
             <Link to={`/detalle/${info.id}`}>
                 <button className='btn btn-outline-primary'>Ver Detalles</button>
             </Link>
