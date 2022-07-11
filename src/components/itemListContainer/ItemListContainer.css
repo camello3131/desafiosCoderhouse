@@ -1,9 +1,13 @@
-.cont-cards {
+.contCards {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-bottom: 15px;
 }
 
+.loader {
+    margin-top: 200px;
+}
 
 
 

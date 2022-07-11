@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: #8030ff;
+    --light: #eeeeee;
+    --dark: #1e1e1e;
+}
+
+
 .itemsCard {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     width: 250px;
-    margin-top: 15px;
+    margin-top: 35px;
     height: 380px;
 }
 
@@ -20,4 +29,16 @@
     margin: 5px 5px;
     top: 0;
     color: #414656;
+}
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 100% !important;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
 }

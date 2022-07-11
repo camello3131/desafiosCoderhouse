@@ -9,7 +9,6 @@ function ItemDetail({data}) {
     const {addProduct} = useCartContext ()
 
     const onAdd = (quantity)=> {
-        alert("compraste " + quantity + " productos")
         setGoToCarte(true)
         addProduct(data, quantity)
     }

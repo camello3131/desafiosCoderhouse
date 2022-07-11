@@ -7,7 +7,7 @@ import Cart from './components/Cart/Cart';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import React from 'react';
 import CartProvider from "./context/CartContext"
-import Slider from './components/Slider/Slider';
+import {Spinner} from "react-bootstrap";
 
 
 function App() {
@@ -16,7 +16,6 @@ function App() {
     <BrowserRouter>
         <CartProvider>
         <NavBar/>
-        <Slider/>
           <Routes>
             <Route path='' element={<ItemListContainer/>}/>
             <Route path='/productos/:categoriaId' element={<ItemListContainer/>}/>

@@ -3,6 +3,7 @@ import ItemList from '../item/ItemList'
 import "./ItemListContainer.css"
 import { useParams } from 'react-router-dom'
 import {getFirestore, collection, getDocs, query, where } from "firebase/firestore"
+import { BeatLoader } from 'react-spinners'
 
 function ItemListContainer(props) {
 
@@ -24,11 +25,25 @@ function ItemListContainer(props) {
     }
   }, [categoriaId])
 
+  const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+      setLoading (true)
+      setTimeout(()=> {
+          setLoading (false)
+      }, 3000)
+    }, [])
+
+
   return (
       <>
-      
-      <div className='cont-cards container'>
-        <ItemList data={data}/>
+      <div className='contCards container'>
+        {
+          loading ?
+          <BeatLoader color='#8030ff' className="loader"/>
+          :
+          <ItemList data={data} />
+        }
       </div>
       </>
   )

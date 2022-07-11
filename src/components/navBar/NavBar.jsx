@@ -13,14 +13,14 @@ function NavBar() {
             </NavLink>
             <div className="menu">
                 <a href="">
-                    <NavLink className="nav-linkk is-active" to={"/cart"}>Carrito</NavLink>
+                    <NavLink className="nav-linkk" to={"/productos/pc"}>Computadoras</NavLink>
                 </a>
                 <a href="">
-                    <NavLink className="nav-linkk" to={"/productos/gaseosas"}>Gaseosas</NavLink>
-                </a>
+                    <NavLink className="nav-linkk" to={"/productos/accesorio"}>Accesorios</NavLink> 
+                </a>   
                 <a href="">
-                    <NavLink className="nav-linkk" to={"/productos/cervezas"}>Cervezas</NavLink> 
-                </a>            
+                    <NavLink className="nav-linkk is-active" to={"/cart"}>Tu Compra</NavLink>
+                </a>         
             </div>
             <button className='hamburger'>
                 <span></span>
