@@ -14,11 +14,11 @@ setTimeout (()=> {
   const inputs = document.querySelectorAll('#formulario input');
 
   const expresiones = {
-    usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    password: /^.{4,12}$/, // 4 a 12 digitos.
+    usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, 
+    nombre: /^[a-zA-ZÀ-ÿ\s0-9]{1,40}$/, 
+    password: /^.{4,12}$/,
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+    telefono: /^\d{7,14}$/ 
   }
 
   const campos = {
@@ -102,6 +102,19 @@ setTimeout (()=> {
 
     const terminos = document.getElementById('terminos');
     if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
+      console.log("hola")
+      const db = getFirestore()
+      const orderCollection = collection(db,"orders")
+  
+      addDoc (orderCollection, order)
+        .then(({id}) => {
+        const container = document.getElementById("containerId")
+        
+        const idd = document.createElement("h5")
+        idd.textContent = ("El id de tu compra es:  " + id)
+  
+        container.appendChild (idd)
+      })
       formulario.reset();
 
       document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
@@ -130,8 +143,6 @@ setTimeout (()=> {
     total: totalPrice(),
   }
 
-
-
   if (cart.length === 0) {
     return (
       <>
@@ -152,8 +163,11 @@ setTimeout (()=> {
         <p className='tot'>
           Total: $ {totalPrice()}
         </p>
+        <div className='contCartVacio seguir'>
+            <Link to= "/"><button className='formulario__btn btnC'>Seguir Comprando</button></Link>
+          </div>
 
-        <h4>Confirma tu compra</h4>
+        <h4 id='tittleConfirm'>Confirma tu compra</h4>
         <div className="containerForm card">
         <div id='containerId'></div>
         <form action="" className="formulario" id="formulario">
@@ -161,7 +175,7 @@ setTimeout (()=> {
 			<div className="formulario__grupo" id="grupo__usuario">
 				<label for="usuario" className="formulario__label">Usuario</label>
 				<div className="formulario__grupo-input">
-					<input type="text" className="formulario__input" name="usuario" id="usuario" placeholder="lucas123"/>
+					<input type="text" className="formulario__input" name="usuario" id="usuario" placeholder="lucas123" required/>
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p className="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
@@ -169,19 +183,19 @@ setTimeout (()=> {
 
 			
 			<div className="formulario__grupo" id="grupo__nombre">
-				<label for="nombre" className="formulario__label">Nombre</label>
+				<label for="nombre" className="formulario__label">Direccion</label>
 				<div className="formulario__grupo-input">
-					<input type="text" className="formulario__input" name="nombre" id="nombre" placeholder="Lucas Britos"/>
+					<input type="text" className="formulario__input" name="nombre" id="nombre" placeholder="Calle San Martin" required/>
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p className="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+				<p className="formulario__input-error">La direccion puede contener un minimo de 6 caracteres.</p>
 			</div>
 
 			
 			<div class="formulario__grupo" id="grupo__password">
 				<label for="password" className="formulario__label">Contraseña</label>
 				<div className="formulario__grupo-input">
-					<input type="password" className="formulario__input" name="password" id="password"/>
+					<input type="password" className="formulario__input" name="password" id="password" aria-required="true"/>
 					<i className="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p className="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
@@ -191,7 +205,7 @@ setTimeout (()=> {
 			<div class="formulario__grupo" id="grupo__password2">
 				<label for="password2" className="formulario__label">Repetir Contraseña</label>
 				<div className="formulario__grupo-input">
-					<input type="password" className="formulario__input" name="password2" id="password2"/>
+					<input type="password" className="formulario__input" name="password2" id="password2" required/>
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p className="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
@@ -201,7 +215,7 @@ setTimeout (()=> {
 			<div className="formulario__grupo" id="grupo__correo">
 				<label for="correo" className="formulario__label">Correo Electrónico</label>
 				<div class="formulario__grupo-input">
-					<input type="email" className="formulario__input" name="correo" id="correo" placeholder="correo@correo.com"/>
+					<input type="email" className="formulario__input" name="correo" id="correo" placeholder="correo@correo.com" required/>
 					<i className="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
@@ -211,7 +225,7 @@ setTimeout (()=> {
 			<div className="formulario__grupo" id="grupo__telefono">
 				<label for="telefono" className="formulario__label">Teléfono</label>
 				<div className="formulario__grupo-input">
-					<input type="text" className="formulario__input" name="telefono" id="telefono" placeholder="4491234567"/>
+					<input type="text" className="formulario__input" name="telefono" id="telefono" placeholder="4491234567" required/>
 					<i className="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p className="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
@@ -220,16 +234,13 @@ setTimeout (()=> {
 			
 			<div className="formulario__grupo" id="grupo__terminos">
 				<label className="formulario__label">
-					<input className="formulario__checkbox" type="checkbox" name="terminos" id="terminos"/>
+					<input className="formulario__checkbox" type="checkbox" name="terminos" id="terminos" required/>
 					Acepto los Terminos y Condiciones
 				</label>
 			</div>
-      <div class="formulario__mensaje" id="formulario__mensaje">
-				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-			</div>
 
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" className="formulario__btn" >Enviar</button>
+				<button type="submit" className="formulario__btn">Comprar</button>
 				<p className="formulario__mensaje-exito" id="formulario__mensaje-exito">Compra realizada exitosamente!</p>
 			</div>
 		</form>

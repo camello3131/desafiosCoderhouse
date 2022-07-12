@@ -163,3 +163,13 @@
 	margin-bottom: 80px;
 	text-align: center;
 }
+.seguir {
+	width: 15%;
+	position: fixed;
+	top: 320px;
+	left: 50px;
+}
+
+#tittleConfirm {
+	text-align: center;
+}
