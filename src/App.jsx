@@ -8,6 +8,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import React from 'react';
 import CartProvider from "./context/CartContext"
 import {Spinner} from "react-bootstrap";
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/detalle/:detalleId' element={<ItemDetailContainer/>}/>
           </Routes>
+          <Footer/>
         </CartProvider>
       </BrowserRouter>
     </>

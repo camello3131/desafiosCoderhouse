@@ -130,26 +130,7 @@ setTimeout (()=> {
     total: totalPrice(),
   }
 
-  const handleClick = () => {
-    
-    const form = document.getElementById("formulario")
-    form.addEventListener("submit", function (event) {
-      event.preventDefault()
-    })
-    
-    const db = getFirestore()
-    const orderCollection = collection(db,"orders")
 
-    addDoc (orderCollection, order)
-      .then(({id}) => {
-      const container = document.getElementById("containerId")
-      
-      const idd = document.createElement("h5")
-      idd.textContent = ("El id de tu compra es:  " + id)
-
-      container.appendChild (idd)
-    })
-  }
 
   if (cart.length === 0) {
     return (
@@ -180,7 +161,7 @@ setTimeout (()=> {
 			<div className="formulario__grupo" id="grupo__usuario">
 				<label for="usuario" className="formulario__label">Usuario</label>
 				<div className="formulario__grupo-input">
-					<input type="text" className="formulario__input" name="usuario" id="usuario" placeholder="john123"/>
+					<input type="text" className="formulario__input" name="usuario" id="usuario" placeholder="lucas123"/>
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p className="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
@@ -190,7 +171,7 @@ setTimeout (()=> {
 			<div className="formulario__grupo" id="grupo__nombre">
 				<label for="nombre" className="formulario__label">Nombre</label>
 				<div className="formulario__grupo-input">
-					<input type="text" className="formulario__input" name="nombre" id="nombre" placeholder="John Doe"/>
+					<input type="text" className="formulario__input" name="nombre" id="nombre" placeholder="Lucas Britos"/>
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p className="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
@@ -243,9 +224,12 @@ setTimeout (()=> {
 					Acepto los Terminos y Condiciones
 				</label>
 			</div>
+      <div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
 
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" className="formulario__btn" onClick={handleClick}>Enviar</button>
+				<button type="submit" className="formulario__btn" >Enviar</button>
 				<p className="formulario__mensaje-exito" id="formulario__mensaje-exito">Compra realizada exitosamente!</p>
 			</div>
 		</form>

@@ -1,0 +1,23 @@
+.lienzo{
+    height: 5px;
+    color: white;
+    z-index: 1;
+}
+.footer{
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    background-color: black;
+    text-align: center;
+}
+
+.footer p{
+    color: white;
+    margin-top: 25px;
+    padding-bottom: -8px;
+}
+#yo{
+    margin-top: -15px;
+}

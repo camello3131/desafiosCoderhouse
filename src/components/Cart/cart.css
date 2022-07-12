@@ -1,9 +1,12 @@
 .contCartVacio p{
 	margin-top: 90px !important;
 }
+.contCartVacio{
+	min-height:100vh;
+    position:relative;
+}
 .btnC {
 	width: 100% !important;
-	margin-bottom: 5px;
 }
 .container {
     margin-top: 50px !important;
