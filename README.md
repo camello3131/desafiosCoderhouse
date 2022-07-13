@@ -25,4 +25,23 @@ Link del proyecto:
 
 ###Capturas de pantalla:
 
-<img>
+<img src="https://i.ibb.co/VgDRYPt/1.png">
+<img src="https://i.ibb.co/HVGtC1Y/2.png">
+<img src="https://i.ibb.co/kqVtDv9/3.png">
+<img src="https://i.ibb.co/RykD6D3/4.png">
+<img src="https://i.ibb.co/kxxbkSn/5.png">
+<img src="https://i.ibb.co/4g7qxTk/6.png">
+  
+  ## -Seguir los siguientes pasos:
+Clonar el repositorio de GitHub:
+
+git clone https://github.com/camello3131/desafiosCoderhouse
+cd dentro del directorio de la carpeta:
+
+cd Proyecto_Ecommerce_React
+Instala las dependencias.
+
+npm install
+Para correr el proyecto:
+
+npm run dev
