@@ -18,14 +18,14 @@ Este es el proyecto final del curso dictado por <a href="https://coderhouse.com/
                 
 ----
 
-| DEPENDENCIAS | USO | 
-| ------ | ---------- | 
-| Firebase | Agrega bases de datos y orden de compra.
-| Bootstrap | Agrega estilos al proyecto. |
-| React | Incorpora la lógica del proyecto. |
-| Vite | Herramienta de compilación. |
-| React-Dom | Para crear interfaces de usuario interactivas. |
-| React-spinners | Incorpora loaders del proyecto. |  
+| DEPENDENCIAS | USO | VERSION | 
+| ------ | ------- | ------|
+| Firebase | Agrega bases de datos y orden de compra. | 9.8.4
+| React - Bootstrap | Agrega estilos al proyecto. | 2.4.0
+| React | Incorpora la lógica del proyecto. | 18.0.0
+| Vite | Herramienta de compilación. | 2.9.9
+| React-Dom | Para crear interfaces de usuario interactivas. | 18.0.0
+| React-spinners | Incorpora loaders del proyecto. | 0.13.3
   
 Link del proyecto:
 
