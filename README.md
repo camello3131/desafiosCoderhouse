@@ -18,6 +18,15 @@ Este es el proyecto final del curso dictado por <a href="https://coderhouse.com/
                 
 ----
 
+| DEPENDENCIAS | USO | 
+| ------ | ---------- | 
+| Firebase | Agrega bases de datos y orden de compra.
+| Bootstrap | Agrega estilos al proyecto. |
+| React | Incorpora la lógica del proyecto. |
+| Vite | Herramienta de compilación. |
+| React-Dom | Para crear interfaces de usuario interactivas. |
+| React-spinners | Incorpora loaders del proyecto. |  
+  
 Link del proyecto:
 
 <a href= "https://camello3131-makes-great-sites.netlify.app/">Link</a>
