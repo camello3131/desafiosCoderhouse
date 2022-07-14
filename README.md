@@ -14,7 +14,7 @@ Info:
 -------------
 Este es el proyecto final del curso dictado por <a href="https://coderhouse.com/">CoderHouse</a> de React Js de la carrera Front-End. Se trata sobre un Ecommerce, el cual está creado con Vite. Se implementa React.js con React Router, React Hooks, Bootstrap (tanto común como React Bootstrap), React-Icons, React-Spinners, Firebase.
 
-###Version Final:
+### Version Final:
                 
 ----
 
@@ -23,7 +23,7 @@ Link del proyecto:
 <a href= "https://camello3131-makes-great-sites.netlify.app/">Link</a>
 
 
-###Capturas de pantalla:
+### Capturas de pantalla:
 
 <img src="https://i.ibb.co/VgDRYPt/1.png">
 <img src="https://i.ibb.co/HVGtC1Y/2.png">
